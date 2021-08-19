@@ -3,10 +3,11 @@ var btn1 = document.querySelector(".btn1");
 var input = document.querySelector("#input-txt");
 var input2 = document.querySelector("#input2-txt");
 var output = document.getElementsByClassName("output");
+var validate = document.querySelector(".validate");
 
 var notes = [2000, 500, 100, 20, 10, 5, 1];
 
-input2.disabled = true;
+validate.style.opacity = "0%";
 
 const changeHandler = () => {
   var value = input.value;
@@ -15,6 +16,19 @@ const changeHandler = () => {
   } else {
     input2.disabled = false;
   }
+};
+
+const changeHandler1 = () => {
+  var bill = parseInt(input.value);
+  var cash = parseInt(input2.value);
+  console.log(cash > bill);
+  console.log(cash);
+  if (cash < bill) {
+    validate.style.opacity = "100%";
+  } else {
+    validate.style.opacity = "0%";
+  }
+  return 0;
 };
 
 const valueReset = () => {
@@ -50,3 +64,4 @@ const onClickHandler = () => {
 btn.addEventListener("click", onClickHandler);
 btn1.addEventListener("click", valueReset);
 input.addEventListener("change", changeHandler);
+input2.addEventListener("change", changeHandler1);

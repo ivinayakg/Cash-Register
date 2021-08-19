@@ -49,6 +49,11 @@ input {
   color: var(--primary);
 }
 
+.content h4 {
+  font-weight: bold;
+  color: red;
+}
+
 .btn,
 .btn1 {
   display: inline;
