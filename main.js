@@ -6,6 +6,17 @@ var output = document.getElementsByClassName("output");
 
 var notes = [2000, 500, 100, 20, 10, 5, 1];
 
+input2.disabled = true;
+
+const changeHandler = () => {
+  var value = input.value;
+  if (value === 0 || value === "") {
+    input2.disabled = true;
+  } else {
+    input2.disabled = false;
+  }
+};
+
 const valueReset = () => {
   input.value = 0;
   input2.value = 0;
@@ -38,3 +49,4 @@ const onClickHandler = () => {
 
 btn.addEventListener("click", onClickHandler);
 btn1.addEventListener("click", valueReset);
+input.addEventListener("change", changeHandler);

@@ -62,3 +62,27 @@ input {
   font-weight: bold;
   cursor: pointer;
 }
+
+.footer {
+  margin-top: 2rem;
+}
+
+.social-links {
+  list-style: none;
+  margin: auto;
+}
+
+.social-links a {
+  display: inline;
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin: auto 1rem;
+}
+
+.footer small {
+  font-size: 1rem;
+}
+
+#input2-txt[disabled] {
+  opacity: 25%;
+}
